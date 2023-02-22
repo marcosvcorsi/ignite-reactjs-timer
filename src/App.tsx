@@ -10,7 +10,7 @@ export function App() {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
 
-      <BrowserRouter>
+      <BrowserRouter basename="/ignite-reactjs-timer">
         <CyclesContextProvider>
           <Router />
         </CyclesContextProvider>

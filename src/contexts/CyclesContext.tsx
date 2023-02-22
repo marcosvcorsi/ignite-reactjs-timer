@@ -44,14 +44,14 @@ export function CyclesContextProvider({
       cycles: [],
       activeCycle: null,
     },
-    (initialState) => {
+    () => {
       const storedStateAsJson = localStorage.getItem(cyclesStatesStorageKey)
 
       if (storedStateAsJson) {
         return JSON.parse(storedStateAsJson)
       }
 
-      return initialState
+      return { cycles: [], activeCycle: null }
     },
   )
 
